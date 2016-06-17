@@ -51,7 +51,7 @@ var tslint = {
 			"allow-null-check"
 		],
 		"variable-name": false,
-		"whitespace"; [
+		"whitespace": [
 			true,
 			"check-branch",
 			"check-decl",

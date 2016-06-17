@@ -1,7 +1,0 @@
-{
-	"root" : {
-		"src": "source",
-		"temp": ".tmp",
-		"dist": "build"
-	}
-}

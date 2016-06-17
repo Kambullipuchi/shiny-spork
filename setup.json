@@ -1,0 +1,11 @@
+{
+	"root" : {
+		"src": "source",
+		"temp": ".tmp",
+		"dist": "build"
+	},
+	"host": {
+		"normal": "http://localhost",
+		"secure": "https://localhost"
+	}
+}
