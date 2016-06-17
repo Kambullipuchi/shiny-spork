@@ -1,0 +1,31 @@
+{
+  "name": "frontend.build",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kambullipuchi/shiny-spork.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Kambullipuchi/shiny-spork/issues"
+  },
+  "homepage": "https://github.com/Kambullipuchi/shiny-spork#readme",
+  "dependencies": {
+    "cross-spawn-async": "^2.2.4",
+    "del": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "http": "0.0.0",
+    "map-stream": "0.0.6",
+    "node-static": "^0.7.7",
+    "open": "0.0.5",
+    "path": "^0.12.7",
+    "run-sequence": "^1.2.1",
+    "vinyl-fs": "^2.4.3"
+  }
+}
