@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var clean = require('./clean');
 var spawn = require('cross-spawn-async');
 
-var TestSingle (done) {
+function TestSingle (done) {
 	var command = ['node_modules/karma/bin/karma', 'start', '--single-run'];
 	var karmaServer = spawn('node', command, { stdio: 'inherit' });
 	karmaServer.on('close', done);
