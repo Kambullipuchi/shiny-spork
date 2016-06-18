@@ -2,19 +2,12 @@ var gulp = require('gulp');
 var http = require('http');
 var path = require('path');
 var gutil = require('gulp-util');
-var package = require('./package');
-var nodeStatic = require('node-static');
-var setup = require(path.resolve('setup.json'));
-var config = require(path.resolve('webpack.dev.config.js'));
+var spawn = require('cross-spawn-async');
 
 function ServeDev () {
-	var port = (config && config.devServer && config.devServer.port) ? config.devServer.port : 9000; 
-	var file = new nodeStatic.Server(setup.root.dist);
-	http.createServer(function (request, response) {
-		request.addListener('end', function () {
-			file.serve(request, response);
-		}).resume();
-	}).listen(port);
+	var command = ['node_modules/webpack-dev-server/bin/webpack-dev-server.js', '--config', './webpack.dev.config.js', '--inline', '--content-base', 'nowhere', '--history-api-fallback'];
+	var webpackDevServer = spawn('node', command, { stdio: 'inherit' });
+	webpackDevServer.on('close', done);
 }
 
 gulp.task('serve:dev', ServeDev);
