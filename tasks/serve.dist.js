@@ -17,5 +17,5 @@ function ServeDist () {
 	}).listen(port);
 }
 
-gulp.task('serve:dist', ServeDist);
+gulp.task('serve:dist', ['package'], ServeDist);
 module.exports = ServeDist;

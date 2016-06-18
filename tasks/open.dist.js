@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var open = require('open');
 var path = require('path');
+var package = require('./package');
 var setup = require(path.resolve('setup.json'));
 var config = require(path.resolve('webpack.dev.config.js'));
 
@@ -10,5 +11,5 @@ function OpenDist () {
 	open(setup.host.normal + ':' + port);
 }
 
-gulp.task('open:dist', OpenDist);
+gulp.task('open:dist', ['package'], OpenDist);
 module.exports = OpenDist;
