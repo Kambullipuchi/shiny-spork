@@ -1,2 +1,2 @@
 var requireDirectories = require('require-dir');
-requireDirectories('./tasks', { recurse: true });
+module.exports = requireDirectories('./tasks', { recurse: true });
